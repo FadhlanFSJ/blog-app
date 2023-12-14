@@ -5,13 +5,8 @@ import {
   Route,
   Outlet
 } from "react-router-dom";
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Single from './pages/Single';
-import Write from './pages/Write';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import { Home, Login, Register, Single, Write } from './pages'
+import { Footer, Navbar } from './components';
 
 const Layout = () => {
   return (
