@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { Home, Login, Register, Single, Write } from './pages'
 import { Footer, Navbar } from './components';
+import './style.scss';
 
 const Layout = () => {
   return (
