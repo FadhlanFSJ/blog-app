@@ -2,7 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      <img src='' alt=''/>
+      <span>Made with 💕 and <b>React.js</b></span>
+    </footer>
   )
 }
 
