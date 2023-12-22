@@ -50,7 +50,7 @@ const Login = () => {
         <button onClick={handleSubmit}>Login</button>
         {err && <p>{err}</p>}
         <span>
-          Apakah kamu sudah punya akun? <Link to="/register">Register</Link>
+          Apakah kamu belum punya akun? <Link to="/register">Register</Link>
         </span>
       </form>
     </div>
