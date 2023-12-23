@@ -6,7 +6,7 @@ import axios from "axios";
 const Register = () => {
   const [inputs, setInputs] = useState({
     username: "",
-    email: "",
+    email: "", 
     password: "",
   });
   const [err, setError] = useState(null);
