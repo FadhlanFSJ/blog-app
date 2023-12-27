@@ -53,7 +53,7 @@ const Register = () => {
           onChange={handleChange}
         />
         <button onClick={handleSubmit}>Register</button>
-        {err && <p>{err}</p>}
+        {err && alert(err.sqlMessage)}
         <span>
           Apakah kamu sudah punya akun? <Link to="/login">Login</Link>
         </span>
