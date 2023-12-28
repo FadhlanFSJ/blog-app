@@ -11,7 +11,7 @@ const Write = () => {
   const state = useLocation().state;
   const [value, setValue] = useState('');
   const [title, setTitle] = useState('');
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState(null);pagessrrc
   const [cat, setCat] = useState("");
 
   const navigate = useNavigate()
@@ -39,6 +39,7 @@ const Write = () => {
             cat,
             img: file ? imgUrl : "",
           })
+          
         : await axios.post(`/posts/`, {
             title,
             desc: value,
@@ -47,6 +48,7 @@ const Write = () => {
             date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
           });
           navigate("/")
+
     } catch (err) {
       console.log(err);
     }
