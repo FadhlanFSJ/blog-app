@@ -70,7 +70,7 @@ const Single = () => {
         <h1>{post.title}</h1>
         <p
           dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(post.description),
+            __html: DOMPurify.sanitize(post.desc),
           }}
         ></p>      </div>
       <Menu cat={post.cat}/>
