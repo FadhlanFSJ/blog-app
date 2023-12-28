@@ -6,7 +6,6 @@ import axios from "axios";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
-
   const cat = useLocation().search
 
   useEffect(() => {
@@ -27,7 +26,6 @@ const Home = () => {
     return doc.body.textContent
   }
 
-
   return (
     <div className="home">
       <div className="posts">
@@ -41,14 +39,15 @@ const Home = () => {
               )}
             </div>
             <div className="content">
-              <Link className="link" to={`/post/${post.id}`}>
-                <h1>{post.title}</h1>
-              </Link>
+              <Link className="link" to={`/post/${post.id}`}><h1>{post.title}</h1></Link>
               <p>{getText(post.desc)}</p>
               <button>Read More</button>
             </div>
           </div>
-        ))}
+          )
+        )
+      }
+
       </div>
     </div>
   );
