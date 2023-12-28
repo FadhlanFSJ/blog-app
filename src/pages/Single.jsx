@@ -48,7 +48,7 @@ const Single = () => {
   return (
     <div className="single">
       <div className="content">
-        <img src={`../upload/${post?.img}`} alt="" />
+        <img src={post.img} alt="" />
         <div className="user">
           {post.userImg && <img
             src={post.userImg}
@@ -70,7 +70,7 @@ const Single = () => {
         <h1>{post.title}</h1>
         <p
           dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(post.desc),
+            __html: DOMPurify.sanitize(post.description),
           }}
         ></p>      </div>
       <Menu cat={post.cat}/>
