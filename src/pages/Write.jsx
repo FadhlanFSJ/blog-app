@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css';
@@ -9,10 +8,10 @@ import axios from "axios";
 const Write = () => {
   
   const state = useLocation().state;
-  const [value, setValue] = useState('');
-  const [title, setTitle] = useState('');
-  const [file, setFile] = useState(null);pagessrrc
-  const [cat, setCat] = useState("");
+  const [value, setValue] = useState(state?.title || "");
+  const [title, setTitle] = useState(state?.desc || "");
+  const [file, setFile] = useState(null);
+  const [cat, setCat] = useState(state?.cat || "");
 
   const navigate = useNavigate()
 
@@ -39,7 +38,7 @@ const Write = () => {
             cat,
             img: file ? imgUrl : "",
           })
-          
+
         : await axios.post(`/posts/`, {
             title,
             desc: value,
